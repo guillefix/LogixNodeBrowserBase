@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wk/kUjLAoeldXaAI/5FOzqviREYgSUOfAnN0ZmTxHEOz++mymS9C6J68WnE0DK9/ltLzDXTU/xWhD2WRUBRxxg==",
+  "success": true,
+  "projectFilePath": "D:\\code\\neos\\LogiXNodeBrowser\\LogiXNodeBrowser\\LogiXNodeBrowser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Guillermo Valle\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Guillermo Valle\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
