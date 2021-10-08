@@ -32,7 +32,7 @@ namespace FrooxEngine.LogiX
         public string components_string2;
         public string logix_string2;
         public Slot nodesContainerSlot;
-        public StringRegister searchResponse;
+        public ValueRegister<string> searchResponse;
         public string sep;
         protected override void OnAttach()
         {
@@ -274,7 +274,7 @@ namespace FrooxEngine.LogiX
         {
             Slot logix = mainSlot.AddSlot("Search logix");
             Network.GET_String getString = logix.AttachComponent<Network.GET_String>();
-            StringRegister url = logix.AttachComponent<StringRegister>();
+            ValueRegister<string> url = logix.AttachComponent<ValueRegister<string>>();
             url.Value.Value = "https://better-lightning-crate.glitch.me/";
             FormatString formatString = logix.AttachComponent<FormatString>();
             ValueField<string> type = logix.AttachComponent<ValueField<string>>();
@@ -289,7 +289,7 @@ namespace FrooxEngine.LogiX
             formatString.Parameters[2].Value = query;
             getString.URL.Value = formatString.Str.ReferenceID;
             Actions.WriteValueNode<string> writeResponse = logix.AttachComponent<Actions.WriteValueNode<string>>();
-            StringRegister response = logix.AttachComponent<StringRegister>();
+            ValueRegister<string> response = logix.AttachComponent<ValueRegister<string>>();
             searchResponse = response;
             writeResponse.Value.Value = getString.Content.ReferenceID;
             writeResponse.Target.Value = response.Value.ReferenceID;
